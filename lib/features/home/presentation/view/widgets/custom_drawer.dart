@@ -11,7 +11,7 @@ class CustomDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      child: CustomScrollView(
+      child: const CustomScrollView(
         slivers: [
           SliverToBoxAdapter(
             child: UserListTile(
@@ -24,7 +24,7 @@ class CustomDrawer extends StatelessWidget {
             hasScrollBody: false,
             child: Column(
               children: [
-                Expanded(child: SizedBox()),
+                Expanded(child: SizedBox(height : 20)),
                 InactiveDrawerItem(
                     drawerItemModel: DrawerItemModel(
                         title: 'Settings', image: Assets.imagesSettings)),
