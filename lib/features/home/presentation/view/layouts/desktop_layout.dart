@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dash_board/features/home/presentation/view/widgets/all_expenses_item.dart';
+import 'package:responsive_dash_board/features/home/presentation/view/widgets/all_expenses.dart';
 import 'package:responsive_dash_board/features/home/presentation/view/widgets/custom_drawer.dart';
 
 class DesktopLayout extends StatelessWidget {
@@ -16,7 +16,7 @@ class DesktopLayout extends StatelessWidget {
         Expanded(
             flex: 2,
             child: Column(
-              children: [AllExpensesItem()],
+              children: [AllExpenses()],
             )),
       ],
     );
