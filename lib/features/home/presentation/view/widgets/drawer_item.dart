@@ -80,6 +80,10 @@ class ActiveDrawerItem extends StatelessWidget {
         drawerItemModel.title,
         style: AppStyles.styleBold16(context),
       ),
+      trailing: Container(
+        width: 3.17,
+        decoration: const BoxDecoration(color: Color(0xff4EB7F2)),
+      ),
     );
   }
 }
