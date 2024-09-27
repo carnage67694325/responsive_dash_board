@@ -4,6 +4,7 @@ import 'package:responsive_dash_board/features/home/presentation/view/widgets/al
 import 'package:responsive_dash_board/features/home/presentation/view/widgets/custom_drawer.dart';
 import 'package:responsive_dash_board/features/home/presentation/view/widgets/my_card.dart';
 import 'package:responsive_dash_board/features/home/presentation/view/widgets/my_card_page_view.dart';
+import 'package:responsive_dash_board/features/home/presentation/view/widgets/my_card_section.dart';
 import 'package:responsive_dash_board/features/home/presentation/view/widgets/quick_inovice.dart';
 
 class DesktopLayout extends StatelessWidget {
@@ -25,7 +26,7 @@ class DesktopLayout extends StatelessWidget {
         SizedBox(
           width: 24,
         ),
-        Expanded(child: MyCardPageView()),
+        Expanded(child: MyCardSection()),
       ],
     );
   }
