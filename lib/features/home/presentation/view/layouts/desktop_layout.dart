@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dash_board/features/home/presentation/view/widgets/All_Expenses_And_Quick_Inovice_Section.dart';
 import 'package:responsive_dash_board/features/home/presentation/view/widgets/all_expenses.dart';
 import 'package:responsive_dash_board/features/home/presentation/view/widgets/custom_drawer.dart';
 import 'package:responsive_dash_board/features/home/presentation/view/widgets/quick_inovice.dart';
@@ -17,18 +18,7 @@ class DesktopLayout extends StatelessWidget {
         Expanded(
             flex: 2,
             child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  SizedBox(
-                    height: 40,
-                  ),
-                  AllExpenses(),
-                  SizedBox(
-                    height: 24,
-                  ),
-                  QuickInovice(),
-                ],
-              ),
+              child: AllExpensesAndQuickInoviceSection(),
             )),
       ],
     );
