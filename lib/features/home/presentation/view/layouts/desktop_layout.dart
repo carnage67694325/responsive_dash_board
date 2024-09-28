@@ -6,6 +6,7 @@ import 'package:responsive_dash_board/features/home/presentation/view/widgets/my
 import 'package:responsive_dash_board/features/home/presentation/view/widgets/my_card_page_view.dart';
 import 'package:responsive_dash_board/features/home/presentation/view/widgets/my_card_section.dart';
 import 'package:responsive_dash_board/features/home/presentation/view/widgets/quick_inovice.dart';
+import 'package:responsive_dash_board/features/home/presentation/view/widgets/transaction_history.dart';
 
 class DesktopLayout extends StatelessWidget {
   const DesktopLayout({super.key});
@@ -26,7 +27,7 @@ class DesktopLayout extends StatelessWidget {
         SizedBox(
           width: 24,
         ),
-        Expanded(child: MyCardSection()),
+        Expanded(child: TransactionHistory()),
       ],
     );
   }
