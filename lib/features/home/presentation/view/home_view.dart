@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/core/widgets/adaptive_layout.dart';
-import 'package:responsive_dash_board/features/home/presentation/view/layouts/desktop_layout.dart';
+import 'package:responsive_dash_board/features/home/presentation/layouts/desktop_layout.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
