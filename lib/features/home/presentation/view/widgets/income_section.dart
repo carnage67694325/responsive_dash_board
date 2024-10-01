@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/features/home/presentation/view/widgets/custom_contianer.dart';
+import 'package:responsive_dash_board/features/home/presentation/view/widgets/income_chart.dart';
+import 'package:responsive_dash_board/features/home/presentation/view/widgets/income_details.dart';
 import 'package:responsive_dash_board/features/home/presentation/view/widgets/income_header.dart';
 
 class IncomeSection extends StatelessWidget {
@@ -7,10 +9,37 @@ class IncomeSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CustomContainer(
+    double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
+
+    return CustomContainer(
       child: Column(
+        mainAxisSize: MainAxisSize.min, // Shrink-wraps the content
         children: [
-          IncomeHeader(),
+          const IncomeHeader(),
+          SizedBox(height: screenHeight * 0.02), // Responsive vertical spacing
+          // Use a Container or SizedBox with responsive width/height
+          Row(
+            children: [
+              Flexible(
+                flex: 1,
+                child: SizedBox(
+                  height: screenHeight *
+                      0.25, // 25% of the screen height for the chart
+                  child:
+                      const IncomeChart(), // The chart takes up flexible space
+                ),
+              ),
+              Flexible(
+                flex: 2,
+                child: SizedBox(
+                  height: screenHeight *
+                      0.25, // 25% of the screen height for the chart
+                  child: IncomeDetails(), // The details take up flexible space
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
