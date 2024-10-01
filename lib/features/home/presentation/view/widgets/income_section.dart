@@ -17,7 +17,10 @@ class IncomeSection extends StatelessWidget {
         mainAxisSize: MainAxisSize.min, // Shrink-wraps the content
         children: [
           const IncomeHeader(),
-          SizedBox(height: screenHeight * 0.02), // Responsive vertical spacing
+          SizedBox(height: screenHeight * 0.02),
+          SizedBox(
+            height: 18,
+          ), // Responsive vertical spacing
           // Use a Container or SizedBox with responsive width/height
           Row(
             children: [
@@ -30,12 +33,16 @@ class IncomeSection extends StatelessWidget {
                       const IncomeChart(), // The chart takes up flexible space
                 ),
               ),
+              const SizedBox(
+                width: 40,
+              ),
               Flexible(
                 flex: 2,
                 child: SizedBox(
                   height: screenHeight *
                       0.25, // 25% of the screen height for the chart
-                  child: IncomeDetails(), // The details take up flexible space
+                  child:
+                      const IncomeDetails(), // The details take up flexible space
                 ),
               ),
             ],
