@@ -19,7 +19,7 @@ class IncomeSection extends StatelessWidget {
           const IncomeHeader(),
           SizedBox(height: screenHeight * 0.02),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Flexible(
                 flex: 1,
