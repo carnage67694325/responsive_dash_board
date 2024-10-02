@@ -18,7 +18,7 @@ class IncomeSection extends StatelessWidget {
         children: [
           const IncomeHeader(),
           SizedBox(height: screenHeight * 0.02),
-          SizedBox(
+          const SizedBox(
             height: 18,
           ), // Responsive vertical spacing
           // Use a Container or SizedBox with responsive width/height
