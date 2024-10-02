@@ -23,6 +23,9 @@ class TabletLayout extends StatelessWidget {
             child: SingleChildScrollView(
               child: Column(
                 children: [
+                  SizedBox(
+                    height: 40,
+                  ),
                   AllExpensesAndQuickInoviceSection(),
                   SizedBox(height: 25),
                   MyCardTransactionHistory(),

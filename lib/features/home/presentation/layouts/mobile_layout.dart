@@ -10,9 +10,12 @@ class MobileLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return const SingleChildScrollView(
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 32),
+        padding: EdgeInsets.symmetric(horizontal: 16),
         child: Column(
           children: [
+            SizedBox(
+              height: 10,
+            ),
             AllExpensesAndQuickInoviceSection(),
             SizedBox(height: 25),
             MyCardTransactionHistory(),
