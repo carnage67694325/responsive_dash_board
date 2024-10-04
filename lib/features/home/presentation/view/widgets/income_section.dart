@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/features/home/presentation/view/widgets/custom_contianer.dart';
 import 'package:responsive_dash_board/features/home/presentation/view/widgets/income_chart.dart';
@@ -18,7 +20,31 @@ class IncomeSection extends StatelessWidget {
         children: [
           const IncomeHeader(),
           SizedBox(height: screenHeight * 0.02),
-          Row(
+          IncomeSectionBody(
+            screenHeight: screenHeight,
+            screenWidth: screenWidth,
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class IncomeSectionBody extends StatelessWidget {
+  const IncomeSectionBody({
+    super.key,
+    required this.screenHeight,
+    required this.screenWidth,
+  });
+
+  final double screenHeight;
+  final double screenWidth;
+  @override
+  Widget build(BuildContext context) {
+    log(screenWidth.toString());
+    return screenWidth >= 1300 && screenWidth <= 1400
+        ? SizedBox()
+        : Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Flexible(
@@ -41,9 +67,6 @@ class IncomeSection extends StatelessWidget {
                 ),
               ),
             ],
-          ),
-        ],
-      ),
-    );
+          );
   }
 }
