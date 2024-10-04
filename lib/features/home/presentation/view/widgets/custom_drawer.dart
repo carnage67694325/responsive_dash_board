@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/core/utils/app_images.dart';
+import 'package:responsive_dash_board/core/utils/size_config.dart';
 import 'package:responsive_dash_board/features/home/data/model/drawer_item_model.dart';
 import 'package:responsive_dash_board/features/home/data/model/user_info_model.dart';
 import 'package:responsive_dash_board/features/home/presentation/view/widgets/drawer_item.dart';
@@ -11,7 +12,7 @@ class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.sizeOf(context).width * 0.7,
+      width: SizeConfig.width * 0.7,
       color: Colors.white,
       child: const CustomScrollView(
         slivers: [
