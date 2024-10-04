@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/core/utils/size_config.dart';
+import 'package:responsive_dash_board/features/home/presentation/view/widgets/detailed_income_chart.dart';
 import 'package:responsive_dash_board/features/home/presentation/view/widgets/income_chart.dart';
 import 'package:responsive_dash_board/features/home/presentation/view/widgets/income_details.dart';
 
@@ -17,7 +18,14 @@ class IncomeSectionBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return screenWidth >= SizeConfig.desktop && screenWidth <= 1400
-        ? SizedBox()
+        ? Flexible(
+            child: SizedBox(
+                height: screenHeight * .23,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: const DetailedIncomeChart(),
+                )),
+          )
         : Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
