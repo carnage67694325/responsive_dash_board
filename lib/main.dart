@@ -4,7 +4,7 @@ import 'package:responsive_dash_board/features/home/presentation/view/home_view.
 
 void main() {
   runApp(DevicePreview(
-      enabled: true, builder: (context) => ResponsiveDashBoardApp()));
+      enabled: true, builder: (context) => const ResponsiveDashBoardApp()));
 }
 
 class ResponsiveDashBoardApp extends StatelessWidget {

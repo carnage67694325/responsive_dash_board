@@ -35,21 +35,55 @@ class _AllExpensesItemListViewState extends State<AllExpensesItemListView> {
   @override
   Widget build(BuildContext context) {
     return Row(
-        children: items.asMap().entries.map((e) {
-      int index = e.key;
-      var item = e.value;
-      return Expanded(
-          child: GestureDetector(
-        onTap: () {
-          updateIndex(index);
-        },
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: index == 1 ? 12 : 0),
+      children: [
+        Expanded(
+            child: GestureDetector(
+          onTap: () {
+            updateIndex(0);
+          },
           child: AllExpensesItem(
-              isSelected: selectedIndex == index, expensesItemModel: item),
+              isSelected: selectedIndex == 0, expensesItemModel: items[0]),
+        )),
+        const SizedBox(
+          width: 8,
         ),
-      ));
-    }).toList());
+        Expanded(
+            child: GestureDetector(
+          onTap: () {
+            updateIndex(1);
+          },
+          child: AllExpensesItem(
+              isSelected: selectedIndex == 1, expensesItemModel: items[1]),
+        )),
+        const SizedBox(
+          width: 8,
+        ),
+        Expanded(
+            child: GestureDetector(
+          onTap: () {
+            updateIndex(2);
+          },
+          child: AllExpensesItem(
+              isSelected: selectedIndex == 2, expensesItemModel: items[2]),
+        )),
+      ],
+    );
+    // return Row(
+    //     children: items.asMap().entries.map((e) {
+    //   int index = e.key;
+    //   var item = e.value;
+    //   return Expanded(
+    //       child: GestureDetector(
+    //     onTap: () {
+    //       updateIndex(index);
+    //     },
+    //     child: Padding(
+    //       padding: EdgeInsets.symmetric(horizontal: index == 1 ? 12 : 0),
+    //       child: AllExpensesItem(
+    //           isSelected: selectedIndex == index, expensesItemModel: item),
+    //     ),
+    //   ));
+    // }).toList());
   }
 
   void updateIndex(int index) {
